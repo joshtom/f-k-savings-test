@@ -1,0 +1,76 @@
+.banner {
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: $primary;
+    padding: 20px 40px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: url('../assets/Bg-Shape.svg') no-repeat;
+        height: 556px;
+        bottom: -150px;
+    }
+    &--bg {
+        width: 100%;
+        height: 600px;
+    }
+    &--heading {
+        font-size: 4rem;
+        color: $white;
+        margin-top: 30px;
+        z-index: 0;
+        width: 700px;
+
+        @media screen and (max-width: 600px){
+        font-size: 2.5rem;
+        width: 100%;
+        }
+
+        
+    }
+    // Frequently Asked questions styling
+    .fullWidth, .investment {
+        margin-top: 0px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &--input {
+        background: red;
+        height: auto;
+        width: 70%;
+        align-self: center;
+        z-index: 0;
+
+        @media screen and (max-width: 600px){
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            height: 70px;
+            border: none;
+            background: #020E91;
+            color: $white;
+            padding-left: 20px;
+            &::placeholder {
+                color: $white;
+            }
+        }
+    }
+
+    // End of frequently asked questions
+
+
+
+    .banner--bg-secondary {
+        position: absolute;
+        z-index: 4;
+    }
+}

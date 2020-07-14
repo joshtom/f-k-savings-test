@@ -1,0 +1,59 @@
+.testimonial {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 20px 100px;
+    top: 160px;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    @media screen and (max-width: 700px) {
+        padding: 20px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -40px;
+        width: 100%;
+        background: url('../assets/testimonial-bg.svg') center no-repeat;
+        height: 700px;
+        bottom: -150px;
+        z-index: -1;
+    }
+    &__card {
+        background: $white;
+        flex: 1 1 350px;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 30px;
+        margin: 20px;
+
+        @media screen and (max-width: 500px) {
+            flex-wrap: wrap;
+        }
+
+        &--img {
+            margin-right: 20px;
+            align-self: start;
+            margin-top: 10px;
+            img {
+                width: 50px;
+                margin-top: 15px;
+            }
+        }
+        &--heading {
+            margin-bottom: 10px;
+        }
+        &--content {
+            color: $cardTextColor;
+            line-height: 1.5;
+            text-align: justify;
+            font-size: 14px;
+        }
+        
+    }
+}
